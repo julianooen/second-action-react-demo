@@ -30,3 +30,9 @@ jobs:
         run: npm run build
       - name: Deploy project
         run: echo "Deploying project"
+  test-script:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: script test
+        run: npm run test-script
